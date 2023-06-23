@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'

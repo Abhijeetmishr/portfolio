@@ -1,0 +1,68 @@
+---
+title: Daily Blog
+date: '2022-06-23'
+tags: ['Programming Language', 'Technology', 'Development']
+draft: false
+summary: I will be posting my daily learning to keep track of my progress.
+---
+
+<div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
+  # DSA
+  <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
+  <img src="/static/images/ramon-salinero-unsplash.png" className="h-auto w-full xl:w-1/2" alt="" />
+  </div>
+  ## How to detect cycle in an undirected graph
+
+
+  
+```java
+class Solution {
+    // Function to detect cycle in an undirected graph.
+    public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
+     boolean visited[] = new boolean[V];
+     
+     for(int i = 0 ; i < V; i++){
+         if(visited[i] == false){
+             if(DFS(i, -1, visited, adj))
+             return true;
+         }
+     }
+     
+     return false;
+    }
+    
+    public boolean DFS(int src, int parent, boolean visited[], ArrayList<ArrayList<Integer>> adj){
+        visited[src] = true;
+        
+        for(int it : adj.get(src)){
+            if(visited[it] == false){
+               if(DFS(it, src, visited, adj))
+               return true;
+            }
+            else if(it != parent){
+                return true;
+            }
+        }
+        
+        return false;
+    }
+}
+```
+</div>
+
+
+
+
+
+
+
+
+### Photo Credits
+
+<div>
+  Maple photo by [Guillaume
+  Jaillet](https://unsplash.com/@i_am_g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+  on
+  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+</div>
+
