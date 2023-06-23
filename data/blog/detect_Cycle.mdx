@@ -1,5 +1,5 @@
 ---
-title: Daily Blog
+title: Detect Cycle in a Graph
 date: '2022-06-23'
 tags: ['Programming Language', 'Technology', 'Development']
 draft: false
@@ -7,33 +7,26 @@ summary: I will be posting my daily learning to keep track of my progress.
 ---
 
 <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
-  # DSA
   <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
-  <img src="/static/images/ramon-salinero-unsplash.png" className="h-auto w-full xl:w-1/2" alt="" />
+    ![image](/static/images/ales-nesetril.png)
   </div>
   ## How to detect cycle in an undirected graph
-
-
   
 ```java
 class Solution {
     // Function to detect cycle in an undirected graph.
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
      boolean visited[] = new boolean[V];
-     
      for(int i = 0 ; i < V; i++){
          if(visited[i] == false){
              if(DFS(i, -1, visited, adj))
              return true;
          }
      }
-     
      return false;
     }
-    
     public boolean DFS(int src, int parent, boolean visited[], ArrayList<ArrayList<Integer>> adj){
         visited[src] = true;
-        
         for(int it : adj.get(src)){
             if(visited[it] == false){
                if(DFS(it, src, visited, adj))
@@ -43,26 +36,35 @@ class Solution {
                 return true;
             }
         }
-        
         return false;
     }
 }
 ```
+## Follow the below steps to implement the above approach:
+- Iterate over all the nodes of the graph and Keep a visited array visited[] to track the visited nodes.
+- Run a Depth First Traversal on the given subgraph connected to the current node and pass the parent of the current node. In each recursive call
+  - Set visited[root] as 1.
+  - Iterate over all adjacent nodes of the current node in the adjacency list 
+    - If it is not visited then run DFS on that node and return true if it returns true.
+    - Else if the adjacent node is visited and **not the parent of the current node** then return true.
+  - Return false.
+
 </div>
-
-
-
-
-
-
-
-
-### Photo Credits
 
 <div>
-  Maple photo by [Guillaume
-  Jaillet](https://unsplash.com/@i_am_g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/s/photos/canada?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+## How to detect cycle in a directed graph
 </div>
+
+
+
+### Credits
+
+<div>
+  Photo by [Ales Nesetril](https://unsplash.com/photos/Im7lZjxeLhg)
+  on
+  [Unsplash](https://unsplash.com/photos/Im7lZjxeLhg)
+</div>
+<div>
+  credits [GeeksforGeeks](https://www.cdn.geeksforgeeks.org/detect-cycle-in-a-graph/)
+</div>  
 
