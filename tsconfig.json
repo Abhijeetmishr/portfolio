@@ -38,6 +38,6 @@
     ".contentlayer/generated",
     ".contentlayer/generated/**/*.json",
     ".next/types/**/*.ts"
-  ],
+, "data/blog/graph_traversal.mdx"  ],
   "exclude": ["node_modules"]
 }

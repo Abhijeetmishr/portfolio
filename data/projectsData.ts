@@ -1,19 +1,21 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'A scalable food ordering app',
+    description: `QEats is a popular food ordering app that allows users to browse and order their favorite dishes from nearby restaurants.`,
+    imgSrc: '/static/images/QEats.png',
+    href: 'https://www.crio.do/learn/portfolio/abhijeetmishra498/ME_QEATS_V2/',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'A visual stock protfolio analyzer',
+    description: `QMoney is a visual stock portfolio analyzer. It helps portfolio managers make trade recommendations for their clients.`,
+    imgSrc: '/static/images/QMoney.png',
+    href: 'https://www.crio.do/learn/portfolio/abhijeetmishra498/ME_QMONEY/',
+  },
+  {
+    title: 'Web App for tracking your reading habit.',
+    description: `Web App for Controlling your reading habit. Tracking the books you read and fuel your reading.`,
+    imgSrc: '/static/images/better-reads.png',
+    href: 'https://github.com/Abhijeetmishr/Better-Reads-App',
   },
 ]
 
